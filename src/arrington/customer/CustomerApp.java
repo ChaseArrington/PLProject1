@@ -15,8 +15,10 @@ public class CustomerApp {
             System.out.print("Enter a Customer Number: ");
             CustomerID = user_input.next();
             int IDNum = Integer.parseInt(CustomerID);
+            CustomerDB customer = CustomerDB(getCustomer.IDNum);
             System.out.println("");
-            System.out.println("Customer Info Here");
+            Customer cust = new Customer();
+            System.out.println(cust.getNameandAddress());
             System.out.println("");
             System.out.print("Display another customer? (y/n): ");
             Continue = user_input.next();
