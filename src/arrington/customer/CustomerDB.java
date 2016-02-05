@@ -2,7 +2,7 @@ package arrington.customer;
 
 public class CustomerDB {
 
-    public static CustomerDB getCustomer(int customerNumber) {
+    public Customer getCustomer(int customerNumber) {
 
         Customer customer = new Customer();
 
@@ -25,7 +25,10 @@ public class CustomerDB {
             customer.setCity("Greensboro");
             customer.setState("NC");
             customer.setPostalCode("27410");
+        } else{
+            return null;
         }
+
 
         return customer;
     }
