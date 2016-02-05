@@ -2,24 +2,24 @@ package arrington.customer;
 
 public class CustomerDB {
 
-    public Customer getCustomer(int customerNumber) {
+    public Customer getCustomer(String customerNumber) {
 
         Customer customer = new Customer();
 
 
-        if (customerNumber == 1001) {
+        if (customerNumber.equals("1001")) {
             customer.setName("Barbara White");
             customer.setAddress("3400 Richmond Parkway #3423");
             customer.setCity("Bristol");
             customer.setState("CT");
             customer.setPostalCode("06010");
-        } else if (customerNumber == 1002) {
+        } else if (customerNumber.equals("1002")) {
             customer.setName("Karl Vang");
             customer.setAddress("327 Franklin Street");
             customer.setCity("Edina");
             customer.setState("MN");
             customer.setPostalCode("55435");
-        } else if (customerNumber == 1003) {
+        } else if (customerNumber.equals("1003")) {
             customer.setName("Ronda Chavan");
             customer.setAddress("518 Commanche Dr.");
             customer.setCity("Greensboro");

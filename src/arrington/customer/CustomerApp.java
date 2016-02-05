@@ -15,9 +15,9 @@ public class CustomerApp {
             System.out.println("");
             System.out.print("Enter a Customer Number: ");
             CustomerID = user_input.next();
-            int IDNum = Integer.parseInt(CustomerID);
+            //int IDNum = Integer.parseInt(CustomerID);
             CustomerDB testerGuy = new CustomerDB();
-            Customer outputGuy = testerGuy.getCustomer(IDNum);
+            Customer outputGuy = testerGuy.getCustomer(CustomerID);
             System.out.println("");
             if (outputGuy == null) {
                 System.out.println("There is no customer number " + CustomerID + " in our records.");
