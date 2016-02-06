@@ -15,28 +15,29 @@
   </target>
 
   <target name="compile" depends="init"
-        description="compile the source">
+          description="compile the source">
     <!-- Compile the java code from ${src} into ${build} -->
     <javac srcdir="${src}" destdir="${build}"/>
   </target>
 
   <target name="dist" depends="compile"
-        description="generate the distribution">
+          description="generate the distribution">
     <!-- Create the distribution directory -->
     <mkdir dir="${dist}/lib"/>
 
     <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
     <jar jarfile="${dist}/lib/MyProject-${DSTAMP}.jar" basedir="${build}">
-            <manifest>
-                <attribute name="Main-Class" value="arrington.customer.CustomerApp"/>
-            </manifest>
+      <manifest>
+        <attribute name="Main-Class" value="arrington.customer.CustomerApp"/>
+      </manifest>
     </jar>
   </target>
 
   <target name="clean"
-        description="clean up">
+          description="clean up">
     <!-- Delete the ${build} and ${dist} directory trees -->
     <delete dir="${build}"/>
     <delete dir="${dist}"/>
   </target>
 </project>
+

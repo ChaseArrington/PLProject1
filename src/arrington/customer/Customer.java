@@ -60,7 +60,7 @@ public class Customer {
 
     // The get method for Name and Address in the desired format
     public String getNameAndAddress() {
-        return getName() + "\n" + getAddress() + "\n" + getCity() + ", " + getState() + "\n" + getPostalCode();
+        return getName() + "\n" + getAddress() + "\n" + getCity() + ", " + getState() + " " + getPostalCode();
     }
 
 
